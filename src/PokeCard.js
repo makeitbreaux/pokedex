@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pokecard.css';
+import './PokeCard.css';
 
 const POKE_API = 'https://raw.githubusercontent.com/' +
   'PokeAPI/sprites/master/sprites/pokemon/';
@@ -7,7 +7,7 @@ const POKE_API = 'https://raw.githubusercontent.com/' +
 
 /** Individual Pokemon card. */
 
-function Pokecard(props) {
+function PokeCard(props) {
   let imgSrc = `${POKE_API}${props.id}.png`;
 
   return (
@@ -20,4 +20,4 @@ function Pokecard(props) {
   );
 }
 
-export default Pokecard;
+export default PokeCard;

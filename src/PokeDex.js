@@ -1,21 +1,21 @@
 import React from "react";
-import Pokecard from "./Pokecard";
-import "./Pokedex.css";
+import PokeCard from "./PokeCard";
+import "./PokeDex.css";
 
 /** Index of Pokemon: show individual cards. */
 
-function Pokedex(props) {
+function PokeDex(props) {
   let winMessage = null;
   if (props.isWinner) {
     winMessage = <p className="Pokedex-winner">THIS HAND WINS!</p>;
   }
 
   return (
-    <div className="Pokedex">
-      <h2 className="Pokedex-title">Pokedex</h2>
-      <div className="Pokedex-cards">
+    <div className="PokeDex">
+      <h2 className="PokeDex-title">Pokedex</h2>
+      <div className="PokeDex-cards">
         {props.pokemon.map(p => (
-          <Pokecard
+          <PokeCard
             id={p.id}
             name={p.name}
             type={p.type}
@@ -29,4 +29,4 @@ function Pokedex(props) {
   );
 }
 
-export default Pokedex;
+export default PokeDex;

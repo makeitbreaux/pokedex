@@ -1,7 +1,7 @@
 import React from "react";
-import Pokedex from "./Pokedex";
+import PokeDex from "./PokeDex";
 
-function Pokegame(props) {
+function PokeGame(props) {
   let hand1 = [];
   let hand2 = [...props.pokemon];
 
@@ -17,13 +17,13 @@ function Pokegame(props) {
 
   return (
     <div>
-      <Pokedex pokemon={hand1} exp={exp1} isWinner={exp1 > exp2} />
-      <Pokedex pokemon={hand2} exp={exp2} isWinner={exp2 > exp1} />
+      <PokeDex pokemon={hand1} exp={exp1} isWinner={exp1 > exp2} />
+      <PokeDex pokemon={hand2} exp={exp2} isWinner={exp2 > exp1} />
     </div>
   );
 }
 
-Pokegame.defaultProps = {
+PokeGame.defaultProps = {
   pokemon: [
     { id: 4, name: "Charmander", type: "fire", base_experience: 62 },
     { id: 7, name: "Squirtle", type: "water", base_experience: 63 },
@@ -36,4 +36,4 @@ Pokegame.defaultProps = {
   ]
 };
 
-export default Pokegame;
+export default PokeGame;
